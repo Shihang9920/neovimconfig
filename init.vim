@@ -7,6 +7,7 @@
 " ╚═╝  ╚═══╝╚══════╝ ╚═════╝   ╚═══╝  ╚═╝╚═╝     ╚═╝
 "==================================================
 lua require('plugins')
+lua require('plugin-config.nvim-tree')
 
 "行号
 set number
@@ -24,16 +25,46 @@ syntax on
 set showmatch           
 set hlsearch          
 
+
+"airline字体
+let g:airline_powerline_fonts = 1
+" airline主题
+let g:airline_theme="violet"
+"vim主题设置
+set background=dark
+colorscheme zephyr
+"autocmd vimenter * nested colorscheme gruvbox
+
+"括号补全
+let g:AutoPairs={'(':')', '[':']', '{':'}', '"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
+
+
+
+"==================================================
+"                          _     __   
+"   ____  ___  ____ _   __(_)___/ /__ 
+"  / __ \/ _ \/ __ \ | / / / __  / _ \
+" / / / /  __/ /_/ / |/ / / /_/ /  __/
+"/_/ /_/\___/\____/|___/_/\__,_/\___/ 
+"==================================================                         
+
+"neovide字体
+set guifont=MesloLGMDZ\ Nerd\ Font\ Mono:h12
 " 透明度
-let g:neovide_transparency = 0.5
+let g:neovide_transparency = 1
 let g:neovide_floating_blur_amount_x = 1.0
 let g:neovide_floating_blur_amount_y = 1.0
-
 " 刷新率
 let g:neovide_refresh_rate = 165
 " 抗锯齿
 let g:neovide_cursor_antialiasing = v:true
 let g:neovide_cursor_vfx_mode = "railgun"
+let g:neovide_confirm_quit = v:true
+let g:neovide_profiler = v:false
+"动画
+"let g:neovide_cursor_animation_length = 0.05
+let g:neovide_cursor_animate_in_insert_mode = v:true
+
 
 
 
@@ -41,12 +72,6 @@ let g:neovide_cursor_vfx_mode = "railgun"
 " 括号补全
 let g:AutoPairs={'(':')', '[':']', '{':'}', '"':'"', "`":"`", '```':'```', '"""':'"""', "'''":"'''"}
 
-
-"airline字体
-let g:airline_powerline_fonts = 1
-" airline主题
-let g:airline_theme="violet"
-"autocmd vimenter * nested colorscheme gruvbox
 
 "  _    ___                 ____  __           
 " | |  / (_)___ ___        / __ \/ /_  ______ _
@@ -241,3 +266,7 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+
+
+
