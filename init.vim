@@ -9,7 +9,6 @@
 lua require('plugins')
 lua require('plugin-config.nvim-tree')
 
-"行号
 set number
 set relativenumber
 "缩进
